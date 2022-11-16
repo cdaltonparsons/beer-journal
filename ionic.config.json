@@ -1,0 +1,7 @@
+{
+  "name": "beer-journal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
