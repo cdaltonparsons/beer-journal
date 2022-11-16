@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from '../beers.model';
+import { BeersService } from '../beers.service';
 
 @Component({
   selector: 'app-discover',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discover.page.scss'],
 })
 export class DiscoverPage implements OnInit {
+  loadedBeers: Beer[];
 
-  constructor() { }
+  constructor(private beersService: BeersService) { }
 
   ngOnInit() {
+    this.loadedBeers = this.beersService.beers;
   }
 
 }

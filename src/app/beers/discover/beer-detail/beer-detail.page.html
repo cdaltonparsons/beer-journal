@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>beer-detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/beers/tabs/discover"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ beer.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button (click)="addBeer()">Add to My Beers</ion-button>
 
 </ion-content>

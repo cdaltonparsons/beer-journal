@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edit-beer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/beers/tabs/my-beers"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ beer.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-button class="ion-margin" color="primary" (click)="toggleEdit()">Edit</ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>
