@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'beers', pathMatch: 'full'},
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'beers',
+    loadChildren: () => import('./beers/beers.module').then( m => m.BeersPageModule)
   },
+  {
+    path: 'breweries',
+    loadChildren: () => import('./breweries/breweries.module').then( m => m.BreweriesPageModule)
+  }
 ];
 
 @NgModule({
